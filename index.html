@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SPILL - Autonomous Shopping Agent</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Landing Screen -->
+    <div class="screen active" id="landing">
+        <div class="landing">
+            <div class="floating-icons" id="floatingIcons"></div>
+            
+            <div class="logo">SPILL</div>
+            <div class="tagline">Your autonomous shopping agent that gets you. Paste any social handle and watch magic happen.</div>
+            <div style="font-size: 0.9rem; opacity: 0.7; margin-bottom: 2rem;">Powered by brands from the New Voices Fund portfolio 💜</div>
+            
+            <div class="input-container">
+                <input type="text" class="magic-input" placeholder="@yourhandle or any social link..." id="socialInput">
+            </div>
+            
+            <button class="cta-button" onclick="startBuilding()">
+                Build My Store ✨
+            </button>
+        </div>
+    </div>
+
+    <!-- Building Screen -->
+    <div class="screen" id="building">
+        <div class="building">
+            <div class="building-animation">
+                <div class="store-outline">
+                    <div class="shelf"></div>
+                    <div class="shelf"></div>
+                    <div class="shelf"></div>
+                    <div class="shelf"></div>
+                </div>
+            </div>
+            
+            <div class="building-text" id="buildingText">Building Your Store...</div>
+            <div class="building-subtext" id="buildingSubtext">Scrying your selfies...</div>
+        </div>
+    </div>
+
+    <!-- Store Screen -->
+    <div class="screen" id="store">
+        <div class="store">
+            <div class="chat-panel">
+                <div class="chat-header">Chat with SPILL</div>
+                <div class="chat-messages" id="chatMessages">
+                    <div class="message ai">Hey there! I'm SPILL, your personal shopping companion. What are you looking for today? 🛍️</div>
+                </div>
+                <input type="text" class="chat-input" placeholder="Type or use voice..." id="chatInput">
+            </div>
+            
+            <div class="main-content">
+                <div class="welcome-banner">
+                    <div class="welcome-text">Welcome, Jordan! 👑</div>
+                    <div class="welcome-subtext">We've been waiting for you. Let's get you glowing.</div>
+                </div>
+                
+                <div class="product-grid" id="productGrid">
+                    <!-- Products will be populated by JavaScript -->
+                </div>
+            </div>
+            
+            <div class="filters-panel">
+                <div class="filters-header">Vibes & Filters</div>
+                <button class="vibe-tag" onclick="filterProducts('selfcare')">✨ Self-Care Sundays</button>
+                <button class="vibe-tag" onclick="filterProducts('datenight')">💕 Date Night Ready</button>
+                <button class="vibe-tag" onclick="filterProducts('blackowned')">✊🏾 Black-Owned Brands</button>
+                <button class="vibe-tag" onclick="filterProducts('sustainable')">🌱 Sustainable Living</button>
+                <button class="vibe-tag" onclick="filterProducts('wellness')">🧘🏾‍♀️ Wellness Warrior</button>
+            </div>
+        </div>
+        
+        <button class="purchase-button" onclick="startPurchase()">
+            I'm Ready to Buy 🛒
+        </button>
+    </div>
+
+    <!-- Purchase Screen -->
+    <div class="screen" id="purchase">
+        <div class="purchase">
+            <div class="cart-animation">
+                <div class="cart-runner">🛒</div>
+            </div>
+            
+            <div class="building-text">Fetching your future...</div>
+            <div class="progress-bar">
+                <div class="progress-fill"></div>
+            </div>
+            <div class="building-subtext" id="purchaseText">Calculating savings...</div>
+        </div>
+    </div>
+
+    <!-- Confirmation Screen -->
+    <div class="screen" id="confirmation">
+        <div class="confirmation">
+            <div class="building-text">Order Complete! 🎉</div>
+            
+            <div class="impact-stats">
+                <div class="stat-item">
+                    You supported <span class="stat-number">7</span> Black-owned businesses today
+                </div>
+                <div class="stat-item">
+                    Brands supported: <span class="stat-number" style="font-size: 1rem;">The Lip Bar, UOMA Beauty, The Honey Pot</span>
+                </div>
+                <div class="stat-item">
+                    You've contributed <span class="stat-number">$156.98</span> to the culture
+                </div>
+                <div class="stat-item">
+                    Estimated delivery: <span class="stat-number">2-3 days</span>
+                </div>
+                <div class="community-pot">
+                    Community Impact: $2.4M+ 🌟
+                </div>
+            </div>
+            
+            <button class="cta-button" onclick="showExtension()">
+                Continue to Chrome Extension ➡️
+            </button>
+        </div>
+    </div>
+
+    <!-- Chrome Extension Screen -->
+    <div class="screen" id="extension">
+        <div class="extension">
+            <div class="logo" style="margin-bottom: 1rem;">SPILL Extension</div>
+            <div class="tagline">Shop anywhere. Support everywhere.</div>
+            
+            <div class="browser-mockup">
+                <div class="browser-bar">
+                    <div class="browser-dots">
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+                    </div>
+                    <div class="url-bar">amazon.com/shopping-cart</div>
+                </div>
+                <div class="browser-content">
+                    <div class="product-comparison">
+                        <div class="original-product">
+                            <div style="font-size: 3rem; margin-bottom: 0.5rem;">🧴</div>
+                            <div>Generic Shampoo</div>
+                            <div style="color: #999;">Big Brand Co.</div>
+                            <div style="color: #999;">$12.99</div>
+                        </div>
+                        <div style="font-size: 2rem;">→</div>
+                        <div class="spill-suggestion">
+                            <div class="spill-badge">SPILL Pick</div>
+                            <div style="font-size: 3rem; margin-bottom: 0.5rem;">🥑</div>
+                            <div>Fresh Avocado Deep Conditioner</div>
+                            <div style="color: #feca57; font-weight: 600;">NaturAll Club</div>
+                            <div style="color: #feca57;">$35.00</div>
+                            <div style="font-size: 0.8rem; margin-top: 0.5rem;">Black-owned • Natural • Cruelty-free</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="extension-features">
+                <div class="feature-card">
+                    <div class="feature-icon">🔍</div>
+                    <div class="feature-title">Smart Detection</div>
+                    <div>Automatically finds Black-owned alternatives while you shop</div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <div class="feature-title">One-Click Switch</div>
+                    <div>Replace items in your cart with community-supporting options</div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">💰</div>
+                    <div class="feature-title">Price Match</div>
+                    <div>Find alternatives at similar or better prices</div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📊</div>
+                    <div class="feature-title">Impact Tracking</div>
+                    <div>See your cumulative support for Black businesses</div>
+                </div>
+            </div>
+            
+            <button class="install-button" onclick="simulateInstall()">
+                <span class="chrome-icon">🌐</span>
+                Add to Chrome - It's Free
+            </button>
+            
+            <div style="margin-top: 2rem; opacity: 0.7;">
+                Works on Amazon, Target, Walmart, and 100+ shopping sites
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

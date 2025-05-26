@@ -14,19 +14,27 @@ SPILL is a culturally-aware autonomous shopping agent prototype that creates per
 - Natural language shopping assistance
 - Smart product recommendations
 - Context-aware responses based on user needs
+- Real-time filtering based on chat interactions
 
 ### 🎯 Vibe-Based Shopping
 - Filter products by mood and occasion:
-  - ✨ Self-Care Sundays
-  - 💕 Date Night Ready
-  - ✊🏾 Black-Owned Brands
-  - 🌱 Sustainable Living
-  - 🧘🏾‍♀️ Wellness Warrior
+  - 🔥 All Products
+  - ✨ Self-Care
+  - 💕 Date Night
+  - ✊🏾 Hair & Beauty
+  - 🧘🏾‍♀️ Wellness
+
+### 🛒 Smart Cart System
+- Real-time cart updates with visual feedback
+- Animated cart counter
+- Personalized encouragement messages
+- Accurate price calculations
 
 ### 📊 Community Impact Tracking
 - Real-time impact statistics
 - Transparency in supporting Black-owned businesses
 - Community contribution tracking
+- Detailed purchase summaries
 
 ### 🌐 Chrome Extension Preview
 - Mock browser extension demonstration
@@ -47,6 +55,16 @@ This prototype features real products from New Voices Fund portfolio companies:
 - **Young King Hair Care** - Products for textured hair
 - **Healthy Roots Dolls** - Empowering dolls and books
 
+## Recent Updates (May 26, 2025)
+- **Fixed** all JavaScript syntax errors and broken string concatenations
+- **Improved** cart functionality with proper price parsing
+- **Enhanced** filter system with correct event handling
+- **Added** smooth state management and reset functionality
+- **Optimized** mobile responsiveness
+- **Fixed** UI layering issues with proper z-index management
+- **Improved** purchase flow with accurate calculations
+- **Enhanced** chat AI responses that trigger product filtering
+
 ## Technologies Used
 - Pure HTML, CSS, and JavaScript
 - CSS animations and gradients
@@ -60,6 +78,13 @@ Visit: [https://iphonz.github.io/spill-shopping-prototype/](https://iphonz.githu
 1. Clone the repository
 2. Open `index.html` in your browser
 3. No build process required!
+
+## User Flow
+1. **Landing**: Enter your name and social handle
+2. **Building**: Watch as your personalized store is created
+3. **Shopping**: Browse products, chat with SPILL, add items to cart
+4. **Purchase**: Review your order and see your impact
+5. **Extension**: Learn about the browser extension concept
 
 ## Vision
 SPILL represents the future of autonomous shopping - where AI understands not just what you want to buy, but who you are and what you value. By centering Black-owned businesses and tracking community impact, SPILL transforms every purchase into an act of economic empowerment.
